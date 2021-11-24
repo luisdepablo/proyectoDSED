@@ -122,7 +122,7 @@ en_4_cycles<= en_4_cycles_aux;
     end process;                          
 
 --output logic
-clk_3megas<= '1' when (r_reg_3>1 and r_reg_3<=3) else '0';
+clk_3megas<= '1' when (r_reg_3>1) else '0';
 
 
 end Behavioral;
