@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov 26 19:09:40 2021
+# Process ID: 952
+# Current directory: C:/Users/vicpt/Documents/GitHub/new/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9500 C:\Users\vicpt\Documents\GitHub\new\final_project\final_project.xpr
+# Log file: C:/Users/vicpt/Documents/GitHub/new/final_project/vivado.log
+# Journal file: C:/Users/vicpt/Documents/GitHub/new/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/vicpt/Documents/GitHub/new/final_project/final_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/dsed/Documents/GitHub/proyectoDSED/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 805.121 ; gain = 102.328
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 26 19:40:54 2021...
