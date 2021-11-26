@@ -44,7 +44,7 @@ end pwm;
 
 architecture Behavioral of pwm is
 
-signal next_state,current_state: unsigned (8 downto 0):=(others=>'0');
+signal next_state,current_state: unsigned (sample_size downto 0):=(others=>'0');
 signal next_sample,current_sample: std_logic_vector(sample_size-1 downto 0):=(others=>'0');
 
 begin

@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Nov 26 01:16:37 2021
-# Process ID: 23840
-# Current directory: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/impl_1
+# Start of session at: Fri Nov 26 11:44:38 2021
+# Process ID: 13448
+# Current directory: C:/Users/dsed/Documents/GitHub/proyectoDSED/final_project/final_project.runs/impl_1
 # Command line: vivado.exe -log pwm.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pwm.tcl -notrace
-# Log file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/impl_1/pwm.vdi
-# Journal file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/impl_1\vivado.jou
+# Log file: C:/Users/dsed/Documents/GitHub/proyectoDSED/final_project/final_project.runs/impl_1/pwm.vdi
+# Journal file: C:/Users/dsed/Documents/GitHub/proyectoDSED/final_project/final_project.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source pwm.tcl -notrace
