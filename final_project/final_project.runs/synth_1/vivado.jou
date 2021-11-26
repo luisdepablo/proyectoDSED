@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Tue Nov 23 12:50:55 2021
-# Process ID: 12796
-# Current directory: C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project/final_project.runs/synth_1
-# Command line: vivado.exe -log en_4_cycles.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source en_4_cycles.tcl
-# Log file: C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project/final_project.runs/synth_1/en_4_cycles.vds
-# Journal file: C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project/final_project.runs/synth_1\vivado.jou
+# Start of session at: Fri Nov 26 01:15:51 2021
+# Process ID: 28988
+# Current directory: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1
+# Command line: vivado.exe -log pwm.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm.tcl
+# Log file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/pwm.vds
+# Journal file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source en_4_cycles.tcl -notrace
+source pwm.tcl -notrace
