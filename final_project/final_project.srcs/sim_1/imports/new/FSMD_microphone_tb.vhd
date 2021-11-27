@@ -25,7 +25,7 @@ use work.package_dsed.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -58,10 +58,11 @@ end component en_4_cycles;
 signal clk_12megas,reset,en_4,sample_out_ready,micro_data:std_logic:='0';
 signal sample_out:std_logic_vector(sample_size -1 downto 0):=(others=>'0');
 
+signal a,b,c: std_logic:='0';
 
 signal clk_3megas,en_2: std_logic;
 
-constant clk_period: time:= 83.3333 ns;      
+constant clk_period: time:= 83.3333ns;      
 
 begin
 
@@ -89,8 +90,13 @@ clk_process:process
                  wait for clk_period/2;    
 end process;
 
-micro_data<='1';
-reset<='1','0' after 40 ns;   
+--micro_data<='1';
+reset<='1','0' after 10 ns;
+
+a <= not a after 1300 ns;
+b <= not b after 2100 ns;
+c <= not c after 3700 ns;
+micro_data <= a xor b xor c;      
                                
 
 end Behavioral;

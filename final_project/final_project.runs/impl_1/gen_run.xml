@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1637923452">
-  <File Type="PWROPT-DRC" Name="pwm_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="pwm_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="pwm_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="pwm_power_routed.rpx"/>
   <File Type="PA-TCL" Name="pwm.tcl"/>
-  <File Type="OPT-HWDEF" Name="pwm.hwdef"/>
+  <File Type="INIT-TIMING" Name="pwm_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="pwm_methodology_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="pwm_drc_pwropted.rpt"/>
   <File Type="RDI-RDI" Name="pwm.vdi"/>
   <File Type="OPT-DCP" Name="pwm_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="pwm.hwdef"/>
   <File Type="OPT-DRC" Name="pwm_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="pwm_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="pwm_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="pwm_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="pwm_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="pwm_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="pwm.bin"/>
   <File Type="ROUTE-DRC-RPX" Name="pwm_drc_routed.rpx"/>
-  <File Type="BG-DRC" Name="pwm.drc"/>
+  <File Type="BG-BIN" Name="pwm.bin"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="pwm_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MSK" Name="pwm.msk"/>
+  <File Type="BG-DRC" Name="pwm.drc"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pwm_methodology_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="pwm.bgn"/>
+  <File Type="BITSTR-MSK" Name="pwm.msk"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pwm_methodology_drc_routed.pb"/>
+  <File Type="BG-BGN" Name="pwm.bgn"/>
   <File Type="ROUTE-PWR" Name="pwm_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="pwm_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="pwm_route_status.rpt"/>
