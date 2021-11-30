@@ -50,7 +50,6 @@ signal data_1,data_2: unsigned (sample_size-1 downto 0);
 signal count_next : integer;
 signal data_1_next,data_2_next : unsigned (sample_size-1 downto 0);
 signal sample_next,sample : unsigned (sample_size-1 downto 0);
-signal sample_ready,sample_ready_next : std_logic;
 signal state_reg,state_next: fsmd_state_type;
 signal first_cycle,first_cycle_next : std_logic;
 begin
@@ -65,8 +64,6 @@ reg:process(clk_12megas,reset)
 			first_cycle<='0';
 			
 			sample<=(others=>'0');
-			sample_ready<='0';
-			
 			state_reg<=idle;
 		elsif rising_edge(clk_12megas) then
 			if enable_4_cycles='1' then
@@ -76,7 +73,6 @@ reg:process(clk_12megas,reset)
 				first_cycle<=first_cycle_next;           
 			                            
 				sample<=sample_next;  
-				sample_ready<=sample_ready_next; 
 				
 				state_reg<=state_next;  
 			end if;
@@ -84,71 +80,81 @@ reg:process(clk_12megas,reset)
 	end process;
 	
 fsm:process(count,data_1,data_2,first_cycle,micro_data,count_next,data_1_next,data_2_next,first_cycle_next,
-            state_reg,enable_4_cycles,sample,sample_next,sample_ready,sample_ready_next)
+            state_reg,enable_4_cycles,sample,sample_next)
 	begin
 		--Default values
 		count_next<=count;
 		data_1_next<=data_1;   
 		data_2_next<=data_2;	
 		first_cycle_next<=first_cycle;
-		--sample_out_ready<='0';
 		sample_next<=sample;
-		sample_ready_next<='0';
 		state_next<=idle;
 		
 		case state_reg is
-			when idle=>
-				count_next<=count+1;
-				if((0<=count and count<=104) or (149<=count and count<=254)) then					
-					if micro_data='1' then	
-						data_1_next<=data_1+1;
-						data_2_next<=data_2+1;
+			when idle=>				
+				if((0<=count and count<=104) or (149<=count and count<=254)) then	
+				    count_next<=count+1;								
+					if micro_data='1' then
+					   if(data_1=255)then
+                            data_1_next<=data_1;
+                       else            
+                            data_1_next<=data_1+1;
+                       end if;
+					   if(data_2=255)then
+                           data_2_next<=data_2;
+                       else            
+                           data_2_next<=data_2+1;
+                       end if;                       	
 					end if;
+				    state_next<=idle;	
 				else	
 					if(105<=count and count<=148) then
+					   count_next<=count+1;
 						if micro_data='1' then
-							data_1_next<=data_1+1;
+						    if(data_1=255)then
+							     data_1_next<=data_1;
+							else		    
+							     data_1_next<=data_1+1;
+							end if;
 						end if;
 						if(first_cycle='1' and count=105) then	
 							sample_next<=data_2;
 							data_2_next<=(others=>'0');
-							sample_ready_next<='1';
+						else
+
 						end if;
+				        state_next<=idle;						
 					else
-						if count=299 then
+						if (count=299) then
 							count_next<=0;
 							first_cycle_next<='1';
+						else
+						     count_next<= count + 1;
 						end if;
 						if micro_data<='1' then
-							data_2_next<=data_2+1;
+                            if(data_2=255)then
+                                data_2_next<=data_2;
+                            else            
+                                data_2_next<=data_2+1;
+                            end if;
 						end if;
-						if count=255 then
+						if (count=255) then
 							sample_next<=data_1;
 							data_1_next<=(others=>'0');
-							sample_ready_next<='1';
+						else
 						end if;
+                		state_next<=idle;						
 					end if;
 				end if;
 		end case;
 	end process;
 					
 sample_out<=std_logic_vector(sample);		
-sample_out_ready<=sample_ready and enable_4_cycles;
+sample_out_ready<= enable_4_cycles when ((count=106 or count =256)  and first_cycle='1' ) else '0';
 						
 						
 			
 			
 			
-			
-			
-			
-			
-			
-		
-		
-		
-			
-
-
-        
+     
 end Behavioral;
