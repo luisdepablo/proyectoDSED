@@ -35,6 +35,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 package package_dsed is
 	constant sample_size: integer := 8;
+	
+	constant clk_period: time :=83.3333 ns;
 
 
 

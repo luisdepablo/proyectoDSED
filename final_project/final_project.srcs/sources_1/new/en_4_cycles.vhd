@@ -34,13 +34,13 @@ end en_4_cycles;
 
 architecture Behavioral of en_4_cycles is
 
-signal r_reg_2,r_next_2: unsigned(2 downto 0) := "000";
+signal r_reg_2,r_next_2: unsigned(1 downto 0) := "00";
 signal en_2_cycles_aux: std_logic;
 
-signal r_reg_4,r_next_4: unsigned(2 downto 0) := "000";
+signal r_reg_4,r_next_4: unsigned(1 downto 0) := "00";
 signal en_4_cycles_aux: std_logic;
 
-signal r_reg_3,r_next_3: unsigned(2 downto 0) := "000";
+signal r_reg_3,r_next_3: unsigned(1 downto 0) := "00";
 signal en_3megas: std_logic;
 signal clk3_meg:std_logic:='0';
 
@@ -88,7 +88,7 @@ en_2_cycles<= en_2_cycles_aux;
 --next state logic
     process(r_next_4,r_reg_4)
     begin
-        if (r_reg_4 = 4) then 
+        if (r_reg_4 = 3) then 
             r_next_4 <= (others => '0');
           else     
           r_next_4 <=  r_reg_4 +1;   

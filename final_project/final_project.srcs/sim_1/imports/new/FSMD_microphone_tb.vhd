@@ -58,7 +58,7 @@ end component en_4_cycles;
 signal clk_12megas,reset,en_4,sample_out_ready,micro_data:std_logic:='0';
 signal sample_out:std_logic_vector(sample_size -1 downto 0):=(others=>'0');
 
---signal a,b,c: std_logic:='0';
+signal a,b,c: std_logic:='0';
 
 signal clk_3megas,en_2: std_logic;
 
@@ -90,13 +90,13 @@ clk_process:process
                  wait for clk_period/2;    
 end process;
 
-micro_data<='1';
+--micro_data<='1';
 reset<='1','0' after 10 ns;
 
---a <= not a after 1300 ns;
---b <= not b after 2100 ns;
---c <= not c after 3700 ns;
---micro_data <= a xor b xor c;      
+a <= not a after 1300 ns;
+b <= not b after 2100 ns;
+c <= not c after 3700 ns;
+micro_data <= a xor b xor c;      
                                
 
 end Behavioral;
