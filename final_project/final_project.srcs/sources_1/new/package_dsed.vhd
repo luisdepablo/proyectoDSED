@@ -37,6 +37,7 @@ package package_dsed is
 	constant sample_size: integer := 8;
 	
 	constant clk_period: time :=83.3333 ns;
+	constant clk_100Mhz_period: time :=10 ns;
 
 
 

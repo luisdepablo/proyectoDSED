@@ -120,7 +120,7 @@ en_PWM<=en_2 and play_enable;
 en_FSMD<=en_4 and record_enable;   
 
 jack_sd<='1';
-micro_LR<='1';                       
+micro_LR<='0';                       
 
 
 end Behavioral;
