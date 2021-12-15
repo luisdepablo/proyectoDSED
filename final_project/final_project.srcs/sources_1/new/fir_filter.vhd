@@ -86,6 +86,9 @@ BEGIN
 		when "010" =>C<=C2;
 		when "011" =>C<=C3;
 		when "100" =>C<=C4;
+		when others=>
+			C<=(others=>'0');
+			X<=(others=>'0');
 	end case;
 	
 	case MUX1 is             	--MUX2
@@ -125,11 +128,11 @@ begin
 			MUX3<='1';	
 		when t6=> 
 			state_next<=t7;
-			MUX1<="000";
+			MUX1<="101";
 			MUX3<='1';	
 		when t7=> 
 			state_next<=t8;
-			MUX1<="000";
+			MUX1<="101";
 			MUX3<='1';	
 		when t8=> 
 			state_next<=t1;
