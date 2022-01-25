@@ -44,18 +44,45 @@ end fir_filter;
 
 architecture Behavioral of fir_filter is
 
-signal R0,R1,R2 :signed(2*sample_size -1 downto 0);
-signal R0_next,R1_next,R2_next :signed(2*sample_size -1 downto 0);
-signal C0,C1,C2,C3,C4,C,X0,X1,X2,X3,X4,X :signed (sample_size -1 downto 0);
-signal op:signed(2*sample_size -1 downto 0);
-type state_FSMD is (idle,t1,t2,t3,t4,t5,t6,t7,t8);
+signal R0,R1,R2 :std_logic_vector(sample_size -1 downto 0);
+signal R0_next,R1_next,R2_next :std_logic_vector(sample_size -1 downto 0);
+signal C0,C1,C2,C3,C4,C,X0,X1,X2,X3,X4,X :std_logic_vector (sample_size -1 downto 0);
+signal X0_next,X1_next,X2_next,X3_next,X4_next :std_logic_vector (sample_size -1 downto 0);
+signal op:std_logic_vector(sample_size -1 downto 0);
+type state_FSMD is (idle,t1,t2,t3,t4,t5,t6,t7);
 signal state,state_next: state_FSMD;
-signal MUX1:unsigned(2 downto 0);
-signal MUX3: std_logic;
 
 
+signal r_out,r_out_next :std_logic_vector(sample_size -1 downto 0);
+signal r_out_ready,r_out_ready_next: std_logic;
 
+--mult
+signal m_op1,m_op2,m_out :std_logic_vector(sample_size-1 downto 0);
+--sum
+signal s_op1,s_op2,s_out :std_logic_vector(sample_size-1 downto 0);
+
+component mult 
+    Port ( m_op1 : in std_logic_vector (sample_size -1 downto 0);
+           m_op2 : in std_logic_vector (sample_size -1 downto 0);
+           m_out : out std_logic_vector (sample_size -1 downto 0));
+end component mult;
+
+component sum 
+    Port ( s_op1 : in std_logic_vector (sample_size-1 downto 0);
+           s_op2 : in std_logic_vector (sample_size-1 downto 0);
+           s_out : out std_logic_vector (sample_size-1 downto 0));
+end component sum;
 begin
+
+--MULT
+UUT_MULT: mult PORT MAP(m_op1=>m_op1,
+						m_op2=>m_op2,
+						m_out=>m_out);
+					
+UUT_SUM: sum PORT MAP(	s_op1=>s_op1,
+						s_op2=>s_op2,
+						s_out=>s_out);
+					
 
 
 registers: process(clk,reset)
@@ -64,82 +91,161 @@ begin
 		R0<=(others=>'0');
 		R1<=(others=>'0');
 		R2<=(others=>'0');
+		X0<=(others=>'0');
+		X1<=(others=>'0');
+		X2<=(others=>'0');
+		X3<=(others=>'0');
+		X4<=(others=>'0');
+		r_out<=(others=>'0');
+		r_out_ready<='0';
+		state<= idle;
 	elsif rising_edge(clk) then
 		R0<=R0_next;
 		R1<=R1_next;
-		R1<=R2_next;
+		R2<=R2_next;
+		X0<=X0_next;
+		X1<=X1_next;
+		X2<=X2_next;
+		X3<=X3_next;
+		X4<=X4_next;
+		r_out<=r_out_next;
+		r_out_ready<=r_out_ready_next;
+		state<=state_next;
+		
+		
 	end if;
 end process;
 
-FILTER: PROCESS(R0,R1,R2,C,X,op)
+process(X0,X1,X2,X3,X4,sample_in,sample_in_enable)
 begin
-R0_next<=C*X;
-R1_next<=R0;
-R2_next<=R1+op;
-end process;
-
-MUX: PROCESS(C0,C1,C2,C3,C4,C,X0,X1,X2,X3,X4,X)
-BEGIN
-	case MUX1 is				--MUX1
-		when "000" =>C<=C0;
-		when "001" =>C<=C1;
-		when "010" =>C<=C2;
-		when "011" =>C<=C3;
-		when "100" =>C<=C4;
-		when others=>
-			C<=(others=>'0');
-			X<=(others=>'0');
-	end case;
+	X0_next<=X0;
+	X1_next<=X1;
+	X2_next<=X2;
+	X3_next<=X3;
+	X4_next<=X4;
 	
-	case MUX1 is             	--MUX2
-		when "000" =>X<=X0;     
-		when "001" =>X<=X1;     
-		when "010" =>X<=X2;     
-		when "011" =>X<=X3;     
-		when "100" =>X<=X4;     
-	end case;
+	if sample_in_enable='1' then
+		X0_next<=sample_in;
+		X1_next<=X0;
+		X2_next<=X1;
+		X3_next<=X2;
+		X4_next<=X3;
+	end if;
 end process;
-op<=(others=>'0') when MUX3='0' else R2;       --MUX3    
 
-
-STATES: process(state)
+SELECT_FILTER: process(filter_select)
 begin
+	if filter_select='1' then
+		C0<=C0_HP;
+		C1<=C1_HP;
+		C2<=C2_HP;
+		C3<=C3_HP;
+		C4<=C4_HP;
+	else 
+		C0<=C0_LP;
+	    C1<=C1_LP;
+		C2<=C2_LP;
+		C3<=C3_LP;
+		C4<=C4_LP;
+	end if;
+end process;
+		
+		
+
+
+
+OUTPUT_DECODE: process(state,r_out,r_out_ready,R0,R1,R2,X0,X1,X2,X3,X4,C0,C1,C2,C3,C4,m_out,s_out)
+begin
+	r_out_next<=r_out;
+	r_out_ready_next<=r_out_ready;
+	R0_next<=R0;
+	R1_next<=R1;
+	R2_next<=R2;
+	
+	m_op1<=(others=>'0');
+	m_op2<=(others=>'0');
+	s_op1<=(others=>'0');
+	s_op2<=(others=>'0');
 	case state is
-		when idle => state_next<=t1;
+		when idle => 
+			r_out_ready_next<='0';
 		when t1=> 
-			state_next<=t2;
-			MUX1<="000";
-			MUX3<='0';	
+			m_op1<=C0;
+			m_op2<=X0;
+			R0_next<=m_out;				
 		when t2=> 
-			state_next<=t3;
-			MUX1<="001";
-			MUX3<='0';			
+			m_op1<=C1;
+			m_op2<=X1;
+			R0_next<=m_out;
+			R1_next<=R0;				
 		when t3=> 
-			state_next<=t4;
-			MUX1<="010";
-			MUX3<='0';	
-		when t4=> 
-			state_next<=t5;
-			MUX1<="011";
-			MUX3<='1';	
+			m_op1<=C2;       
+			m_op2<=X2;
+			s_op1<=R1;
+			s_op1<=(others=>'0');       
+			R0_next<=m_out;  
+			R1_next<=R0;
+			R2_next<=s_out;			
+		when t4=>
+			m_op1<=C3;        
+			m_op2<=X3;        
+			s_op1<=R1;        
+			s_op2<=R2;
+			R0_next<=m_out;   
+			R1_next<=R0; 
+			R2_next<=s_out;
 		when t5=> 
-			state_next<=t6;
-			MUX1<="100";
-			MUX3<='1';	
-		when t6=> 
-			state_next<=t7;
-			MUX1<="101";
-			MUX3<='1';	
+			m_op1<=C4;     
+			m_op2<=X4;     
+			s_op1<=R1;     
+			s_op2<=R2;     
+			R0_next<=m_out;
+			R1_next<=R0;   
+			R2_next<=s_out;
+		when t6=>    
+			s_op1<=R1;     
+			s_op2<=R2;
+			R1_next<=R0;   
+			R2_next<=s_out;
+				
 		when t7=> 
-			state_next<=t8;
-			MUX1<="101";
-			MUX3<='1';	
-		when t8=> 
-			state_next<=t1;
-			MUX1<="000";
-			MUX3<='1';	
+			s_op1<=R1; 
+			s_op2<=R2;
+			r_out_next<=s_out;
+			r_out_ready_next<='1'; 
+		
+			
+			
 	END CASE;
 END PROCESS;
+
+STATES: process(state,sample_in_enable)
+begin
+	state_next<=idle;
+	case state is
+		when idle => 
+			if sample_in_enable='1' then
+		     	state_next<=t1;
+			end if;
+		when t1=> 
+			state_next<=t2;
+		when t2=> 
+			state_next<=t3;		
+		when t3=> 
+			state_next<=t4;
+		when t4=> 
+			state_next<=t5;	
+		when t5=> 
+			state_next<=t6;
+		when t6=> 
+			state_next<=t7;
+		when t7=> 
+			state_next<=idle;
+	END CASE;
+END PROCESS;
+
+sample_out<=r_out;
+sample_out_ready<=r_out_ready;
 	                         
 	
 	

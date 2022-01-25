@@ -38,6 +38,16 @@ package package_dsed is
 	
 	constant clk_period: time :=83.3333 ns;
 	constant clk_100Mhz_period: time :=10 ns;
+	
+	--Filter
+		--Low Pass
+		constant C0_LP,C4_LP: std_logic_vector(sample_size -1 downto 0):="00000101";
+		constant C1_LP,C3_LP: std_logic_vector(sample_size -1 downto 0):="00011111";
+		constant C2_LP: std_logic_vector(sample_size -1 downto 0):="00111001";
+		--High Pass
+		constant C0_HP,C4_HP: std_logic_vector(sample_size -1 downto 0):="11111111";
+		constant C1_HP,C3_HP: std_logic_vector(sample_size -1 downto 0):="11100110";
+		constant C2_HP: std_logic_vector(sample_size -1 downto 0):="01001101";
 
 
 

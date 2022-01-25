@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/dsed/Documents/GitHub/proyectoDSED/final_project/final_project.runs/clk_wiz_0_synth_1'
+HD_PWD='D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/clk_wiz_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
