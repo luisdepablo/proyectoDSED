@@ -32,13 +32,13 @@ use work.package_dsed.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity controlador_tb is
+entity dsed_audio_tb is
 --  Port ( );
-end controlador_tb;
+end dsed_audio_tb;
 
-architecture Behavioral of controlador_tb is
+architecture Behavioral of dsed_audio_tb is
 
-component controlador 
+component dsed_audio 
     Port ( clk_100Mhz : in STD_LOGIC;
            reset : in STD_LOGIC;
            micro_clk : out STD_LOGIC;
@@ -63,7 +63,7 @@ signal SW0, SW1: std_logic:='1';
 
 begin
 
-control: controlador Port map ( clk_100Mhz =>clk_100Mhz,
+control: dsed_audio Port map ( clk_100Mhz =>clk_100Mhz,
            reset=> reset,
            micro_clk=>micro_clk, 
            micro_data=>micro_data, 

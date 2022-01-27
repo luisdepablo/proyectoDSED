@@ -90,11 +90,13 @@ begin
 		R0<=(others=>'0');
 		R1<=(others=>'0');
 		R2<=(others=>'0');
+		
 		X0<=(others=>'0');
 		X1<=(others=>'0');
 		X2<=(others=>'0');
 		X3<=(others=>'0');
 		X4<=(others=>'0');
+		
 		r_out<=(others=>'0');
 		r_out_ready<='0';
 		state<= idle;
@@ -102,18 +104,25 @@ begin
 		R0<=R0_next;
 		R1<=R1_next;
 		R2<=R2_next;
+		
 		X0<=X0_next;
 		X1<=X1_next;
 		X2<=X2_next;
 		X3<=X3_next;
 		X4<=X4_next;
+		
 		r_out<=r_out_next;
 		r_out_ready<=r_out_ready_next;
 		state<=state_next;
-		
-		
 	end if;
 end process;
+
+--FILTER TYPE
+C0<= C0_LP WHEN filter_select='0' else C0_HP;
+C1<= C1_LP WHEN filter_select='0' else C1_HP;
+C2<= C2_LP WHEN filter_select='0' else C2_HP;
+C3<= C3_LP WHEN filter_select='0' else C3_HP;
+C4<= C4_LP WHEN filter_select='0' else C4_HP;
 
 process(X0,X1,X2,X3,X4,sample_in,sample_in_enable)
 begin
@@ -131,26 +140,6 @@ begin
 		X4_next<=X3;
 	end if;
 end process;
-
-SELECT_FILTER: process(filter_select)
-begin
-	if filter_select='1' then
-		C0<=C0_HP;
-		C1<=C1_HP;
-		C2<=C2_HP;
-		C3<=C3_HP;
-		C4<=C4_HP;
-	else 
-		C0<=C0_LP;
-	    C1<=C1_LP;
-		C2<=C2_LP;
-		C3<=C3_LP;
-		C4<=C4_LP;
-	end if;
-end process;
-		
-		
-
 
 
 OUTPUT_DECODE: process(state,r_out,r_out_ready,R0,R1,R2,X0,X1,X2,X3,X4,C0,C1,C2,C3,C4,m_out,s_out)
@@ -211,13 +200,11 @@ begin
 			s_op1<=R1; 
 			s_op2<=R2;
 			r_out_next<=s_out;
-			r_out_ready_next<='1'; 
-		
-			
-			
+			r_out_ready_next<='1'; 		
 	END CASE;
 END PROCESS;
 
+--CONTROL PATH
 STATES: process(state,sample_in_enable)
 begin
 	state_next<=idle;
@@ -245,13 +232,5 @@ END PROCESS;
 
 sample_out<=r_out;
 sample_out_ready<=r_out_ready;
-	                         
-	
-	
-	
-	
-		
-		
-	
 
 end Behavioral;
