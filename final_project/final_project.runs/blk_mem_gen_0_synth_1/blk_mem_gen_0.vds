@@ -2,47 +2,12 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Jan 26 18:07:22 2022
-# Process ID: 2976
-# Current directory: C:/Users/vicpt/Documents/GitHub/proyecto/final_project/final_project.runs/blk_mem_gen_0_synth_1
+# Start of session at: Thu Jan 27 02:56:53 2022
+# Process ID: 9784
+# Current directory: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
-# Log file: C:/Users/vicpt/Documents/GitHub/proyecto/final_project/final_project.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
-# Journal file: C:/Users/vicpt/Documents/GitHub/proyecto/final_project/final_project.runs/blk_mem_gen_0_synth_1\vivado.jou
+# Log file: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 306.621 ; gain = 78.641
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [c:/Users/vicpt/Documents/GitHub/proyecto/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (11#1) [c:/Users/vicpt/Documents/GitHub/proyecto/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/synth/blk_mem_gen_0.vhd:70]
-Finished RTL Elaboration : Time (s): cpu = 00:01:48 ; elapsed = 00:01:56 . Memory (MB): peak = 528.082 ; gain = 300.102
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:48 ; elapsed = 00:01:57 . Memory (MB): peak = 528.082 ; gain = 300.102
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 698.008 ; gain = 0.000
-Finished Constraint Validation : Time (s): cpu = 00:02:00 ; elapsed = 00:02:11 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:00 ; elapsed = 00:02:11 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:00 ; elapsed = 00:02:11 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:02 ; elapsed = 00:02:14 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:14 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:15 ; elapsed = 00:02:27 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Timing Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:27 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Technology Mapping : Time (s): cpu = 00:02:15 ; elapsed = 00:02:27 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished IO Insertion : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-
-Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |LUT3       |     3|
-|2     |LUT4       |    11|
-|3     |LUT6       |    16|
-|4     |MUXF7      |     8|
-|5     |RAMB36E1   |    64|
-|6     |RAMB36E1_1 |    64|
-|7     |FDRE       |     6|
-+------+-----------+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:16 ; elapsed = 00:02:28 . Memory (MB): peak = 698.008 ; gain = 470.027
-synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:31 . Memory (MB): peak = 698.008 ; gain = 472.656
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP blk_mem_gen_0, cache-ID = 7e57c97c92b85f82.
