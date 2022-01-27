@@ -1,0 +1,134 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 17544
+License: Customer
+
+Current time: 	1/27/22 5:30:12 PM CET
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 18 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Users/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Users/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Users/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/Users/Vivado/2017.2/bin;C:/Users/Vivado/2017.2/lib/win64.o;C:/Users/Vivado/2017.2/tps/win64/jre/bin/server;C:/Users/Vivado/2017.2/tps/win64/jre/bin;C:/Users/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Users/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Users/Vivado_HLS/2017.2/bin;C:/Program Files (x86)/Common Files/Oracle/Java/javapath;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/;C:/Program Files/Intel/Intel(R) Management Engine Components/iCLS/;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/WINDOWS/System32/OpenSSH/;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files/Git/cmd;C:/Program Files/nodejs/;C:/Program Files/AutoFirma/AutoFirma;C:/Program Files/MATLAB/R2020b/bin;C:/Program Files/PuTTY/;C:/Users/vicpt/AppData/Local/Microsoft/WindowsApps;C:/Users/vicpt/AppData/Roaming/npm;C:/SysGCC/raspberry/bin;C:/Users/vicpt/AppData/Local/GitHubDesktop/bin;C:/Users/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Users/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	vicpt
+User home directory: C:/Users/vicpt
+User working directory: C:/Users/vicpt/Documents/GitHub/proye/final_project
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: C:/Users/Vivado
+HDI_APPROOT: C:/Users/Vivado/2017.2
+RDI_DATADIR: C:/Users/Vivado/2017.2/data
+RDI_BINDIR: C:/Users/Vivado/2017.2/bin
+
+User preferences location: C:/Users/vicpt/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/vicpt/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/vicpt/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Users/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/vicpt/Documents/GitHub/proye/final_project/.Xil/Vivado-17544-LAPTOP-67MV0354
+
+GUI allocated memory:	181 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 577 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\vicpt\Documents\GitHub\proye\final_project\final_project.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 43 MB (+42490kb) [00:00:09]
+// [Engine Memory]: 462 MB (+332470kb) [00:00:09]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 61 MB (+16368kb) [00:00:11]
+// [Engine Memory]: 540 MB (+58581kb) [00:00:11]
+// [Engine Memory]: 577 MB (+10241kb) [00:00:14]
+// Tcl Message: open_project C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 577 MB. GUI used memory: 48 MB. Current time: 1/27/22 5:30:12 PM CET
+// Project name: final_project; location: C:/Users/vicpt/Documents/GitHub/proye/final_project; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 809.184 ; gain = 99.867 
+// [GUI Memory]: 67 MB (+3346kb) [00:00:16]
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// bs:g (cg:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 71 MB (+416kb) [00:00:47]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Jan 27 17:30:44 2022] Launched synth_1... Run output will be captured here: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/runme.log [Thu Jan 27 17:30:44 2022] Launched impl_1... Run output will be captured here: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 601 MB. GUI used memory: 40 MB. Current time: 1/27/22 5:30:45 PM CET
+// PAPropertyPanels.initPanels (controlador.vhd) elapsed time: 0.2s
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controlador(Behavioral) (controlador.vhd)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controlador(Behavioral) (controlador.vhd)]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// [GUI Memory]: 78 MB (+3986kb) [00:01:02]
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h:k (JPanel:JComponent, cg:JFrame)
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Do Not Cancel Process", "Do Not Cancel Process"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h:k (JPanel:JComponent, cg:JFrame)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// [Engine Memory]: 607 MB (+1236kb) [00:01:17]
+// Elapsed time: 25 seconds
+selectCodeEditor("controlador.vhd", 188, 144); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "controlador.vhd", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 84 MB (+1671kb) [00:01:46]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

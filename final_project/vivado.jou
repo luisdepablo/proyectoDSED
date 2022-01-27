@@ -2,12 +2,16 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Nov 26 19:09:40 2021
-# Process ID: 952
-# Current directory: C:/Users/vicpt/Documents/GitHub/new/final_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9500 C:\Users\vicpt\Documents\GitHub\new\final_project\final_project.xpr
-# Log file: C:/Users/vicpt/Documents/GitHub/new/final_project/vivado.log
-# Journal file: C:/Users/vicpt/Documents/GitHub/new/final_project\vivado.jou
+# Start of session at: Thu Jan 27 17:29:52 2022
+# Process ID: 17544
+# Current directory: C:/Users/vicpt/Documents/GitHub/proye/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12980 C:\Users\vicpt\Documents\GitHub\proye\final_project\final_project.xpr
+# Log file: C:/Users/vicpt/Documents/GitHub/proye/final_project/vivado.log
+# Journal file: C:/Users/vicpt/Documents/GitHub/proye/final_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/vicpt/Documents/GitHub/new/final_project/final_project.xpr
+open_project C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.xpr
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
