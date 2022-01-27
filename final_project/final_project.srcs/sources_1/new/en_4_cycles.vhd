@@ -61,7 +61,8 @@ begin
             r_reg_3<=r_next_3;
         end if;
     end process;
-                  
+    
+--CIRCUIT FOR EN_2_CICLES                  
 --next state logic
     process(r_next_2,r_reg_2)
     begin
@@ -99,7 +100,7 @@ en_2_cycles<= en_2_cycles_aux;
 --output logic
 process(r_next_4,r_reg_4,en_4_cycles_aux)
     begin
-        if (r_reg_4 = 2) then 
+        if (r_reg_4 = 3) then 
            en_4_cycles_aux <= '1';
           else     
            en_4_cycles_aux<=  '0';  

@@ -35,7 +35,7 @@ use work.package_dsed.all;
 entity fir_filter is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
-           sample_in : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+           sample_in : in STD_LOGIC_VECTOR(sample_size-1 downto 0);
            sample_in_enable : in STD_LOGIC;
            filter_select : in STD_LOGIC;
            sample_out : out STD_LOGIC_VECTOR (sample_size -1 downto 0);
@@ -46,9 +46,8 @@ architecture Behavioral of fir_filter is
 
 signal R0,R1,R2 :std_logic_vector(sample_size -1 downto 0);
 signal R0_next,R1_next,R2_next :std_logic_vector(sample_size -1 downto 0);
-signal C0,C1,C2,C3,C4,C,X0,X1,X2,X3,X4,X :std_logic_vector (sample_size -1 downto 0);
+signal C0,C1,C2,C3,C4,X0,X1,X2,X3,X4:std_logic_vector (sample_size -1 downto 0);
 signal X0_next,X1_next,X2_next,X3_next,X4_next :std_logic_vector (sample_size -1 downto 0);
-signal op:std_logic_vector(sample_size -1 downto 0);
 type state_FSMD is (idle,t1,t2,t3,t4,t5,t6,t7);
 signal state,state_next: state_FSMD;
 
@@ -256,4 +255,3 @@ sample_out_ready<=r_out_ready;
 	
 
 end Behavioral;
-

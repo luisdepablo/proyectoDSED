@@ -45,13 +45,20 @@ component controlador
            micro_data : in STD_LOGIC;
            micro_lr : out STD_LOGIC;
            jack_sd : out STD_LOGIC;
-           jack_pwm : out STD_LOGIC);
+           jack_pwm : out STD_LOGIC;
+           BTNR: in std_logic;
+           BTNL: in std_logic;
+           BTNC: in std_logic;
+           SW0: in std_logic;
+           SW1: in std_logic);
 end component;
 
-signal micro_clk,reset,micro_data,micro_lr,jack_sd,jack_pwm :std_logic:='0';
+signal micro_clk,reset,micro_data,micro_lr,jack_sd,jack_pwm :std_logic;
 signal clk_100Mhz:std_logic:='1';
 
 signal a,b,c: std_logic:='0';
+signal BTNR, BTNL, BTNC: std_logic:='0';
+signal SW0, SW1: std_logic:='1';
 
 
 begin
@@ -62,12 +69,36 @@ control: controlador Port map ( clk_100Mhz =>clk_100Mhz,
            micro_data=>micro_data, 
            micro_lr=>micro_lr,
            jack_sd=>jack_sd, 
-           jack_pwm=>jack_pwm );
+           jack_pwm=>jack_pwm,
+           BTNR =>BTNR,
+           BTNL =>BTNL,
+           BTNC =>BTNC,
+           SW0 =>SW0,
+           SW1 => SW1);
 
 clk_100Mhz<= not clk_100Mhz after clk_100Mhz_period/2;
 
-reset<='1','0' after 10 ns;
 
+sim_proc: --process(a, b, c)
+            process
+          begin
+            SW0 <='0';
+            SW1 <='0';
+--            micro_data <= '1';
+            reset <= '0';
+            wait for 1 ms;
+            BTNL<= '1' ;
+            wait for 2 ms;
+            BTNL<= '0';
+            wait for 500us;
+            BTNR <= '1' ;
+            wait;
+--            a <= not a after 300 us; --13000 ns
+--            b <= not b after 500 us;          --  24000 ns
+--            c <= not c after 700 us;           -- 37000 ns
+--            micro_data <= (a xor b) xor c;
+----            wait;
+          end process;
 
 a <= not a after 1300 ns;
 b <= not b after 2100 ns;

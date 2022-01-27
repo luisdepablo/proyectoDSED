@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/impl_1'
+HD_PWD='C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project/final_project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log fir_filter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fir_filter.tcl -notrace
+EAStep vivado -log controlador.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source controlador.tcl -notrace
 
 

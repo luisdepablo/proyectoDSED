@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1643251426">
-  <File Type="PWROPT-DRC" Name="fir_filter_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="fir_filter_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="fir_filter_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="fir_filter_power_routed.rpx"/>
-  <File Type="PA-TCL" Name="fir_filter.tcl"/>
-  <File Type="OPT-HWDEF" Name="fir_filter.hwdef"/>
-  <File Type="RDI-RDI" Name="fir_filter.vdi"/>
-  <File Type="OPT-DCP" Name="fir_filter_opt.dcp"/>
-  <File Type="OPT-DRC" Name="fir_filter_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="fir_filter_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="fir_filter_pwropt.dcp"/>
-  <File Type="PWROPT-TIMING" Name="fir_filter_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="fir_filter_placed.dcp"/>
-  <File Type="PLACE-IO" Name="fir_filter_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="fir_filter_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="fir_filter_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="fir_filter_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="fir_filter_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="fir_filter_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="fir_filter_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="fir_filter_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="fir_filter_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="fir_filter_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="fir_filter_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="fir_filter_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="fir_filter_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="fir_filter_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="fir_filter_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="fir_filter_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="fir_filter_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="fir_filter_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="fir_filter.bin"/>
-  <File Type="ROUTE-DRC-RPX" Name="fir_filter_drc_routed.rpx"/>
-  <File Type="BG-DRC" Name="fir_filter.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="fir_filter_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MSK" Name="fir_filter.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fir_filter_methodology_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="fir_filter.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fir_filter_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="fir_filter_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="fir_filter_power_summary_routed.pb"/>
-  <File Type="ROUTE-STATUS" Name="fir_filter_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="fir_filter_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="fir_filter_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="fir_filter_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="fir_filter_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="fir_filter_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="fir_filter_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fir_filter_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fir_filter_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fir_filter_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fir_filter_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fir_filter_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="fir_filter.bit"/>
-  <File Type="BITSTR-RBT" Name="fir_filter.rbt"/>
-  <File Type="BITSTR-NKY" Name="fir_filter.nky"/>
-  <File Type="BITSTR-BMM" Name="fir_filter_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="fir_filter.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="fir_filter.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1643299923">
+  <File Type="PWROPT-DRC" Name="controlador_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="controlador_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="controlador_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="controlador_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="controlador.tcl"/>
+  <File Type="OPT-HWDEF" Name="controlador.hwdef"/>
+  <File Type="RDI-RDI" Name="controlador.vdi"/>
+  <File Type="OPT-DCP" Name="controlador_opt.dcp"/>
+  <File Type="OPT-DRC" Name="controlador_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="controlador_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="controlador_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="controlador_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="controlador_placed.dcp"/>
+  <File Type="PLACE-IO" Name="controlador_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="controlador_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="controlador_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="controlador_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="controlador_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="controlador_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="controlador_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="controlador_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="controlador_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="controlador_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="controlador_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="controlador_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="controlador_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="controlador_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="controlador_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="controlador_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="controlador_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="controlador_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="controlador.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="controlador_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="controlador.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="controlador_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="controlador.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="controlador_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="controlador.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="controlador_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="controlador_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="controlador_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="controlador_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="controlador_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="controlador_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="controlador_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="controlador_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="controlador_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="controlador_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="controlador_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="controlador_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="controlador_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="controlador_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="controlador_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="controlador.bit"/>
+  <File Type="BITSTR-RBT" Name="controlador.rbt"/>
+  <File Type="BITSTR-NKY" Name="controlador.nky"/>
+  <File Type="BITSTR-BMM" Name="controlador_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="controlador.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="controlador.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -118,9 +118,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="fir_filter"/>
+      <Option Name="TopModule" Val="controlador"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -149,6 +156,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
 </GenRun>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1'
+HD_PWD='C:/Users/vicpt/Documents/GitHub/proyectoDSED/final_project/final_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log fir_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_filter.tcl
+EAStep vivado -log controlador.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source controlador.tcl
