@@ -188,6 +188,8 @@ OUTPUT: process (state_reg, sample_out_ready, sample_request, escritura_reg, lec
             when REPRODUCIR =>          
              if(state_next = AL_REVES) then
                  reves_next<= escritura_reg;
+             else
+                lectura_next <= (others => '0');
              end if;
              
             when NORMAL =>
