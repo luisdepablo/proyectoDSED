@@ -2,12 +2,12 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Jan 27 17:59:50 2022
-# Process ID: 20088
-# Current directory: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1
+# Start of session at: Thu Jan 27 18:30:41 2022
+# Process ID: 9696
+# Current directory: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1
 # Command line: vivado.exe -log controlador.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source controlador.tcl
-# Log file: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/controlador.vds
-# Journal file: C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1\vivado.jou
+# Log file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/controlador.vds
+# Journal file: D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source controlador.tcl -notrace
 Command: synth_design -top controlador -part xc7a100tcsg324-1
@@ -15,43 +15,43 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12828 
+INFO: Helper process launched with PID 13920 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 308.086 ; gain = 74.453
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 334.691 ; gain = 76.074
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'controlador' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:54]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Clk' of component 'clk_wiz_0' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:344]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/realtime/clk_wiz_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'Audio_interf' of component 'audio_interface' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:349]
-INFO: [Synth 8-638] synthesizing module 'audio_interface' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:57]
-INFO: [Synth 8-3491] module 'FSMD_microphone' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:36' bound to instance 'FSMD' of component 'FSMD_microphone' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'FSMD_microphone' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:45]
-WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:67]
-WARNING: [Synth 8-6014] Unused sequential element state_next_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'FSMD_microphone' (1#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:45]
-INFO: [Synth 8-3491] module 'en_4_cycles' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:27' bound to instance 'enable_generator' of component 'en_4_cycles' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'en_4_cycles' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'en_4_cycles' (2#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:35]
-INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/pwm.vhd:38' bound to instance 'U_pwm' of component 'pwm' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/pwm.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'pwm' (3#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/pwm.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'audio_interface' (4#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:57]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'Memoria' of component 'blk_mem_gen_0' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:363]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/realtime/blk_mem_gen_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'fir_filter' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:35' bound to instance 'Filtro' of component 'fir_filter' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:371]
-INFO: [Synth 8-638] synthesizing module 'fir_filter' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:45]
-INFO: [Synth 8-3491] module 'mult' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/mult.vhd:35' bound to instance 'UUT_MULT' of component 'mult' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:77]
-INFO: [Synth 8-638] synthesizing module 'mult' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/mult.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'mult' (5#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/mult.vhd:43]
-INFO: [Synth 8-3491] module 'sum' declared at 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/sum.vhd:35' bound to instance 'UUT_SUM' of component 'sum' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'sum' [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/sum.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'sum' (6#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/sum.vhd:41]
-WARNING: [Synth 8-6014] Unused sequential element C3_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:141]
-WARNING: [Synth 8-6014] Unused sequential element C4_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:142]
-INFO: [Synth 8-256] done synthesizing module 'fir_filter' (7#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'controlador' (8#1) [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/controlador.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'controlador' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:54]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Clk' of component 'clk_wiz_0' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/realtime/clk_wiz_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'audio_interface' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'Audio_interf' of component 'audio_interface' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'audio_interface' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:57]
+INFO: [Synth 8-3491] module 'FSMD_microphone' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:36' bound to instance 'FSMD' of component 'FSMD_microphone' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'FSMD_microphone' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element state_next_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'FSMD_microphone' (1#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:45]
+INFO: [Synth 8-3491] module 'en_4_cycles' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:27' bound to instance 'enable_generator' of component 'en_4_cycles' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'en_4_cycles' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'en_4_cycles' (2#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/en_4_cycles.vhd:35]
+INFO: [Synth 8-3491] module 'pwm' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/pwm.vhd:38' bound to instance 'U_pwm' of component 'pwm' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'pwm' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/pwm.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (3#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/pwm.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'audio_interface' (4#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/audio_interface.vhd:57]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'Memoria' of component 'blk_mem_gen_0' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:363]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'fir_filter' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:35' bound to instance 'Filtro' of component 'fir_filter' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:371]
+INFO: [Synth 8-638] synthesizing module 'fir_filter' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:45]
+INFO: [Synth 8-3491] module 'mult' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/mult.vhd:35' bound to instance 'UUT_MULT' of component 'mult' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'mult' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/mult.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'mult' (5#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/mult.vhd:43]
+INFO: [Synth 8-3491] module 'sum' declared at 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/sum.vhd:35' bound to instance 'UUT_SUM' of component 'sum' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'sum' [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/sum.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'sum' (6#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/sum.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element C3_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element C4_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter' (7#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'controlador' (8#1) [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/controlador.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 348.164 ; gain = 114.531
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 374.773 ; gain = 116.156
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -61,60 +61,60 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 348.164 ; gain = 114.531
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 374.773 ; gain = 116.156
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp5/clk_wiz_0_in_context.xdc] for cell 'Clk'
-Finished Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp5/clk_wiz_0_in_context.xdc] for cell 'Clk'
-Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'Memoria'
-Finished Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'Memoria'
-Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/controlador_propImpl.xdc].
+Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp5/clk_wiz_0_in_context.xdc] for cell 'Clk'
+Finished Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp5/clk_wiz_0_in_context.xdc] for cell 'Clk'
+Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'Memoria'
+Finished Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'Memoria'
+Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/controlador_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/controlador_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 663.398 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 688.008 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp5/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/.Xil/Vivado-20088-LAPTOP-67MV0354/dcp5/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp5/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/.Xil/Vivado-9696-LUIS/dcp5/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for Clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Memoria. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "data_1_next" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "data_1_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "data_2_next" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:61]
-WARNING: [Synth 8-6014] Unused sequential element data_1_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element data_2_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element data_1_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element data_2_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:63]
 INFO: [Synth 8-5544] ROM "en_2_cycles_aux" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "en_4_cycles_aux" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "sample_request" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fir_filter'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
 INFO: [Synth 8-5544] ROM "r_out_ready_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "r_out_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "R2_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -124,8 +124,8 @@ INFO: [Synth 8-5546] ROM "state_next" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "reves_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "lectura_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "lectura_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -139,9 +139,9 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Us
                       t7 |                              111 |                              111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fir_filter'
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:100]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -264,21 +264,21 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element Filtro/r_out_ready_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element Filtro/r_out_ready_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/fir_filter.vhd:99]
 INFO: [Synth 8-5545] ROM "Audio_interf/FSMD/data_1_next" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "Audio_interf/FSMD/data_1_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Audio_interf/FSMD/data_2_next" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Audio_interf/U_pwm/sample_request" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "state_next" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element Audio_interf/U_pwm/current_state_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/new/pwm.vhd:58]
-WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/count_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:61]
-WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/data_1_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:62]
-WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/data_2_reg was removed.  [C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element Audio_interf/U_pwm/current_state_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/new/pwm.vhd:58]
+WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/count_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/data_1_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:62]
+WARNING: [Synth 8-6014] Unused sequential element Audio_interf/FSMD/data_2_reg was removed.  [D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/imports/new/FSMD_microphone.vhd:63]
 WARNING: [Synth 8-3917] design controlador has port micro_lr driven by constant 1
 WARNING: [Synth 8-3917] design controlador has port jack_sd driven by constant 1
 WARNING: [Synth 8-3332] Sequential element (Audio_interf/enable_generator/r_reg_2_reg[1]) is unused and will be removed from module controlador.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -292,13 +292,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Clk/clk_out1' to pin 'Clk/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -310,7 +310,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -334,7 +334,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -347,7 +347,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -359,25 +359,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -424,11 +424,11 @@ Report Instance Areas:
 |8     |    UUT_SUM          |sum             |    10|
 +------+---------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 663.398 ; gain = 114.531
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 663.398 ; gain = 429.766
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 688.008 ; gain = 116.156
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 688.008 ; gain = 429.391
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -439,7 +439,7 @@ No Unisim elements were transformed.
 
 62 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 663.398 ; gain = 437.426
-INFO: [Common 17-1381] The checkpoint 'C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/controlador.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 663.398 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 27 18:00:28 2022...
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 688.008 ; gain = 435.766
+INFO: [Common 17-1381] The checkpoint 'D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/controlador.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 688.008 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 27 18:31:26 2022...

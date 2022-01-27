@@ -48,21 +48,20 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.cache/wt [current_project]
-  set_property parent.project_path C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.xpr [current_project]
-  set_property ip_output_repo C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.cache/wt [current_project]
+  set_property parent.project_path D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.xpr [current_project]
+  set_property ip_output_repo D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.runs/synth_1/controlador.dcp
-  read_ip -quiet C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  set_property is_locked true [get_files C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-  read_ip -quiet C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  set_property is_locked true [get_files C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
-  read_xdc C:/Users/vicpt/Documents/GitHub/proye/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
+  add_files -quiet D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.runs/synth_1/controlador.dcp
+  read_ip -quiet D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  set_property is_locked true [get_files D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+  read_ip -quiet D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  set_property is_locked true [get_files D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+  read_xdc D:/bibliotecas/desktop/DSED/proyectoDSED/final_project/final_project.srcs/constrs_1/imports/Downloads/Nexys4DDR_Master.xdc
   link_design -top controlador -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -131,25 +130,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  catch { write_mem_info -force controlador.mmi }
-  write_bitstream -force controlador.bit 
-  catch {write_debug_probes -no_partial_ltxfile -quiet -force debug_nets}
-  catch {file copy -force debug_nets.ltx controlador.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
