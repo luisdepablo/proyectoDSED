@@ -86,12 +86,14 @@ sim_proc: --process(a, b, c)
             SW1 <='0';
 --            micro_data <= '1';
             reset <= '0';
-            wait for 1 ms;
+            wait for 50 us;
             BTNL<= '1' ;
-            wait for 2 ms;
+            wait for 100us;
             BTNL<= '0';
-            wait for 500us;
+            wait for 250us;
             BTNR <= '1' ;
+            SW0 <='1';
+            SW1 <='0';
             wait;
 --            a <= not a after 300 us; --13000 ns
 --            b <= not b after 500 us;          --  24000 ns
