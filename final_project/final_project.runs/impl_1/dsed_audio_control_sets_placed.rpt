@@ -1,0 +1,80 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Sun Jan 30 23:36:23 2022
+| Host         : LAPTOP-67MV0354 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file dsed_audio_control_sets_placed.rpt
+| Design       : dsed_audio
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    36 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               6 |            1 |
+| No           | No                    | Yes                    |              11 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             203 |           66 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+|    Clock Signal    |                 Enable Signal                 | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+|  Clk/inst/clk_out1 |                                               |                  |                1 |              6 |
+|  Clk/inst/clk_out1 | Audio_interf/FSMD/data_1                      | reset_IBUF       |                4 |              8 |
+|  Clk/inst/clk_out1 | Audio_interf/FSMD/data_2                      | reset_IBUF       |                4 |              8 |
+|  Clk/inst/clk_out1 | Audio_interf/FSMD/sample                      | reset_IBUF       |                4 |              8 |
+|  Clk/inst/clk_out1 | Audio_interf/U_pwm/sample_request             | reset_IBUF       |                4 |              8 |
+|  Clk/inst/clk_out1 | Filtro/R0_next                                | reset_IBUF       |                2 |              8 |
+|  Clk/inst/clk_out1 | Filtro/R1_next                                | reset_IBUF       |                4 |              8 |
+|  Clk/inst/clk_out1 | Filtro/R2_next                                | reset_IBUF       |                2 |              8 |
+|  Clk/inst/clk_out1 | Filtro/r_out_next                             | reset_IBUF       |                2 |              8 |
+|  Clk/inst/clk_out1 | Audio_interf/enable_generator/E[0]            | reset_IBUF       |                4 |              9 |
+|  Clk/inst/clk_out1 |                                               | reset_IBUF       |                6 |             11 |
+|  Clk/inst/clk_out1 | Audio_interf/FSMD/E[0]                        | reset_IBUF       |                5 |             19 |
+|  Clk/inst/clk_out1 | Audio_interf/U_pwm/lectura_reg_reg[0][0]      | reset_IBUF       |                3 |             19 |
+|  Clk/inst/clk_out1 | Audio_interf/U_pwm/reves_reg_reg[0][0]        | reset_IBUF       |                6 |             19 |
+|  Clk/inst/clk_out1 | Audio_interf/enable_generator/enable_4_cycles | reset_IBUF       |                9 |             33 |
+|  Clk/inst/clk_out1 | Audio_interf/U_pwm/X0_reg[7][0]               | reset_IBUF       |               13 |             40 |
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 6      |                     1 |
+| 8      |                     8 |
+| 9      |                     1 |
+| 11     |                     1 |
+| 16+    |                     5 |
++--------+-----------------------+
+
+

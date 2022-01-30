@@ -224,8 +224,8 @@ OUTPUT: process (state_reg, sample_out_ready, sample_request, escritura_reg, lec
             wea<="0";
             pointer<= reves_reg;
             sample_in_enable_filtro<=sample_request;
-            filter_in<=(not(douta(sample_size-1)& douta(sample_size-2 downto 0)));
-            sample_in<=std_logic_vector(not(sample_out_filtro(sample_size-1))& sample_out_filtro(sample_size-2 downto 0));
+            filter_in<=(not(douta(7)& douta(6 downto 0)));
+            sample_in<=std_logic_vector(not(sample_out_filtro(7))& sample_out_filtro(6 downto 0));
             pointer<=lectura_reg;
             if (sample_request ='1') then
                lectura_next <= std_logic_vector(unsigned(lectura_reg) +1);
@@ -240,8 +240,8 @@ OUTPUT: process (state_reg, sample_out_ready, sample_request, escritura_reg, lec
             wea<="0";
             pointer<= reves_reg;
             sample_in_enable_filtro<=sample_request;
-            filter_in<=(not(douta(sample_size-1)& douta(sample_size-2 downto 0)));
-            sample_in<=std_logic_vector(not(sample_out_filtro(sample_size-1))& sample_out_filtro(sample_size-2 downto 0));
+            filter_in<=(not(douta(7)& douta(6 downto 0)));
+            sample_in<=std_logic_vector(not(sample_out_filtro(7))& sample_out_filtro(6 downto 0));
             pointer<=lectura_reg;
             if (sample_request ='1') then
                lectura_next <= std_logic_vector(unsigned(lectura_reg) +1);
@@ -289,14 +289,20 @@ NEXT_STATE_LOGIC:
               
               
             when REPRODUCIR =>
-                if(SW1 = '0' and SW0 = '0') then
-                    state_next<= NORMAL;
-                elsif(SW1 = '0' and SW0 = '1') then
-                       state_next<= AL_REVES;
-                elsif(SW1 = '1' and SW0 = '0') then
-                       state_next<= PASO_BAJO;
+                if(escritura_reg = "0000000000000000000") then
+                    state_next<= IDLE;
                 else
+                    if(SW1 = '0' and SW0 = '0') then
+                    state_next<= NORMAL;
+                    elsif(SW1 = '0' and SW0 = '1') then
+                       state_next<= AL_REVES;
+                    elsif(SW1 = '1' and SW0 = '0') then
+                       state_next<= PASO_BAJO;
+                    elsif(SW1 = '1' and SW0 = '1') then
                        state_next<= PASO_ALTO;
+                    else
+                        state_next<= REPRODUCIR;
+                    end if;
                 end if;
             
             
